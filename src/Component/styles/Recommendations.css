@@ -1,0 +1,40 @@
+.Recommendations{
+    flex: 0.5;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-right: 1px solid  #9c9c9c;
+    border-left: 1px solid  #9c9c9c;
+    
+    overflow-y:hidden;
+    scroll-behavior: smooth;
+
+}
+.Home__button{
+    display: flex;
+    padding-left: 10px;
+    padding-right: 10px;
+    justify-content: space-between;
+   
+}
+.Home__button > .icon {
+    color: var(--twitter_primary);
+}
+.Recommendations > hr{
+    margin-top: 15px;
+    width: 100%;
+}
+@media screen and (max-width: 768px) {
+    .Recommendations{
+        
+        flex: 1;
+        transition:  flex 0.2s;
+
+    }
+ }
+ @media screen and (max-width: 1200px) {
+    .Recommendations{
+        
+        flex: 1;
+        transition:  flex 0.2s;
+    }
+ }

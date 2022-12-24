@@ -1,0 +1,42 @@
+
+.Tweet__container{
+    display: flex;
+    width: 100%;
+    gap: 15px;
+    background-color: white;
+    padding: 10px 10px;
+
+}
+.Tweet__container > .Tweet__content{
+    flex: 1;
+}
+.input__section{
+}
+.input__section > .input__hometweet{
+   width: 80%;
+   height: 40px;
+   border: none;
+   outline: none;
+}
+.input__section > .input__hometweet::placeholder{
+    font-size: 20px;
+    color: var(--twiter_font_color);
+    font-weight: 700;
+}
+.icon__tweet{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+.tweet__home{
+    color: white;
+    border-radius: 20px !important;
+}
+.icon_tweethome{
+    color: var( --twitter_primary)
+}
+.icon__section{
+    display: flex;
+    gap: 10px;
+}

@@ -1,0 +1,24 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  
+
+
+}
+:root{
+    --twiter_secondary:RGB(228 232 235);
+    --twiter_font_color: #9c9c9c;
+    --twitter_primary:rgb(76, 76, 233);
+    
+}
+@media screen and (max-width: 768px) {
+    h3{
+        
+        font-size: 15px;
+    }
+    p{
+        font-size: 15px;
+    }
+    
+ }

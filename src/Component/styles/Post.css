@@ -1,0 +1,43 @@
+.Post__container{
+    display: flex;
+    width: 100%;
+    gap: 15px;
+    background-color: white;
+    padding: 10px 10px;
+    border-bottom: 1px solid  #9c9c9c;
+
+
+}
+.Post__container:hover{
+    background-color: var(--twitter_secondary);
+
+}
+.Post__container > .Post__content{
+    flex: 1;
+}
+.Post__heading{
+    display: flex;
+    justify-content: space-between;
+}
+.Post_tvu{
+    display: flex;
+    align-items: center;
+}
+.contentpost__body{
+    color: black;
+}
+span{
+    color: var(--twiter_primary);
+}
+.Post__icon{
+    color: var(--twitter_secondary);
+    margin-top: 10px;
+    display: flex;
+    width: 80%;
+    justify-content: space-between;
+}
+.button_post{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}

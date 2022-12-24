@@ -1,0 +1,16 @@
+.Trend{
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+}
+.trend__type{
+    display: flex;
+}
+.trend__box{
+        justify-content: space-between;
+       display: flex;
+}
+p{
+    color: gray;
+    font-weight: 500;
+}

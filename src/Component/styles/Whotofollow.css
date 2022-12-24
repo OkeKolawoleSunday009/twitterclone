@@ -1,0 +1,13 @@
+.whotofollow__container{
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+}
+.who__content{
+    flex: 1;
+}
+.follow{
+    background-color: black !important;
+    border-radius: 20px !important;
+    font-size: 700;
+}
