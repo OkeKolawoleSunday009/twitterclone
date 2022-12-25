@@ -23,6 +23,7 @@
 .Post__heading{
     display: flex;
     justify-content: space-between;
+    position: relative;
 }
 .Post_tvu{
     display: flex;
@@ -46,6 +47,29 @@ span{
     align-items: center;
     gap: 10px;
 }
+.options__container{
+    
+}
+
+.options{
+    width: 100px;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    height: auto;
+    text-align: center;
+    background-color: black;
+    z-index: 1000;
+    color: white;
+    padding: 10px;
+    position: absolute;
+    border: 1px solid lightblue;
+
+}
+/* .block__options{
+    display: block;
+} */
 @media screen and (max-width: 768px) {
     .Post__icon{
         

@@ -10,6 +10,20 @@ import FileUploadIcon from '@mui/icons-material/FileUpload';
 import kola from '../img/kola.jpg';
 
 export default function PostHome(props,{image_post, comments, tweets, likes, uploads}) {
+  
+
+  // const options=()=> {
+  //   var options = document.getElementById("options");
+  //   options.classList.toggle("options");
+  // }
+
+  function options() {
+    const navs = document.getElementById('#options')
+    
+    navs.classList.toggle('options');
+  }
+  
+ 
   return (
     <div className='Post__container'>
     <Avatar src={kola}/>
@@ -22,8 +36,17 @@ export default function PostHome(props,{image_post, comments, tweets, likes, upl
 
             </div>
 
-            <div>
-                <MoreHoriz/>
+            <div className='options__container'>
+                <MoreHoriz onClick={options}/>
+                <div id='options' className=''>
+                  
+                    <h5>delete</h5>
+                    <h5>edit</h5>
+
+
+                  </div>
+                
+
             </div>
             
 

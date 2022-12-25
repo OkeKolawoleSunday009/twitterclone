@@ -28,8 +28,11 @@ export default function Recommendations() {
       <Tweet image={kola} addTweet={addTweet}/>
       <hr style={{border: "7px solid  #9c9c9c !important;"}}/>
  
-       {tweets.map((tweetNote) => {
-          return <PostHome content ={tweetNote.content} />
+       {tweets.map((tweetNote, index) => {
+          return <PostHome
+           key={index}
+          id ={index}
+           content ={tweetNote.content} />
        })}
 
     
