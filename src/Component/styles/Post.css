@@ -41,3 +41,10 @@ span{
     align-items: center;
     gap: 10px;
 }
+@media screen and (max-width: 768px) {
+    .Post__icon{
+        
+       width: 90%;
+
+    }
+ }

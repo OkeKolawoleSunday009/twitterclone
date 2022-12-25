@@ -1,12 +1,21 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './styles/Recommendations.css'
 import StarOutlineIcon from '@mui/icons-material/StarOutline';
 import Tweet from './Tweet';
-import kola from '../img/kola.jpg'
+import kola from '../img/kola.jpg';
 import Post from './Post';
+import PostHome from './PostHome';
 
 
 export default function Recommendations() {
+  const [tweets, setTweets]= useState([]);
+
+  function addTweet(tweet){
+   setTweets(prevTweets =>{
+    return [...prevTweets, tweet];
+   });
+
+  }
   return (
     <div className='Recommendations'>
       <div className='Home__button'>
@@ -16,8 +25,14 @@ export default function Recommendations() {
       <hr />
 
             
-      <Tweet image={kola}/>
+      <Tweet image={kola} addTweet={addTweet}/>
       <hr style={{border: "7px solid  #9c9c9c !important;"}}/>
+ 
+       {tweets.map((tweetNote) => {
+          return <PostHome content ={tweetNote.content} />
+       })}
+
+    
 
       <Post title="NetFlix Nigeria"
       username="@NetflixNigeria"
@@ -25,42 +40,7 @@ export default function Recommendations() {
       comments="20"
       tweets="252" likes="100" uploads="1"/>
        
-      <Post title="NetFlix Nigeria"
-      username="@NetflixNigeria"
-      content="The doors of the academy are open, class are now in session #farfromhome is now on NetFlix "
-      comments="20"
-      tweets="252" likes="100" uploads="1"/>
-
-       
-      <Post title="NetFlix Nigeria"
-      username="@NetflixNigeria"
-      content="The doors of the academy are open, class are now in session #farfromhome is now on NetFlix "
-      comments="20"
-      tweets="252" likes="100" uploads="1"/>
-        
-      <Post title="NetFlix Nigeria"
-      username="@NetflixNigeria"
-      content="The doors of the academy are open, class are now in session #farfromhome is now on NetFlix "
-      comments="20"
-      tweets="252" likes="100" uploads="1"/>
-       
-      <Post title="NetFlix Nigeria"
-      username="@NetflixNigeria"
-      content="The doors of the academy are open, class are now in session #farfromhome is now on NetFlix "
-      comments="20"
-      tweets="252" likes="100" uploads="1"/>
       
-      <Post title="NetFlix Nigeria"
-      username="@NetflixNigeria"
-      content="The doors of the academy are open, class are now in session #farfromhome is now on NetFlix "
-      comments="20"
-      tweets="252" likes="100" uploads="1"/>
-       
-      <Post title="NetFlix Nigeria"
-      username="@NetflixNigeria"
-      content="The doors of the academy are open, class are now in session #farfromhome is now on NetFlix "
-      comments="20"
-      tweets="252" likes="100" uploads="1"/>
       
       </div>
   )

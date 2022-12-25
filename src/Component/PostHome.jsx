@@ -7,20 +7,18 @@ import ChatBubbleOutlineIcon from '@mui/icons-material/ChatBubbleOutline';
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 import MarkChatUnreadIcon from '@mui/icons-material/MarkChatUnread';
 import FileUploadIcon from '@mui/icons-material/FileUpload';
+import kola from '../img/kola.jpg';
 
-export default function Post({image,image_post, title,username, content, comments, tweets, likes, uploads}) {
-
-
-  
+export default function PostHome(props,{image_post, comments, tweets, likes, uploads}) {
   return (
     <div className='Post__container'>
-    <Avatar src={image}/>
+    <Avatar src={kola}/>
     <div className='Post__content'>
          <div className='Post__heading'>
             <div className='Post_tvu'>
-                <div><h3>{title}</h3></div>
+                <div><h3>Kola</h3></div>
                 <VerifiedUserIcon/>
-                <div><p>{username}</p></div>
+                <div><p>@kola</p></div>
 
             </div>
 
@@ -32,7 +30,7 @@ export default function Post({image,image_post, title,username, content, comment
 
          </div>
          <div className="Post__body">
-            <p className='contentpost__body'>{content}</p>
+            <p className='contentpost__body'>{props.content}</p>
          </div>
 
          <div>

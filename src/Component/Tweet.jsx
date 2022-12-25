@@ -1,18 +1,54 @@
 import { Avatar, Button } from '@mui/material'
-import React from 'react';
+import React, { useState } from 'react';
 import './styles/config.css'
 import './styles/Tweet.css';
 import CropOriginalIcon from '@mui/icons-material/CropOriginal';
 import GifBoxIcon from '@mui/icons-material/GifBox';
 import InsertEmoticonIcon from '@mui/icons-material/InsertEmoticon';
+import kola from '../img/kola.jpg';
 
-export default function Tweet({image}) {
+  
+export default function Tweet(props) {
+
+  const [tweetPost, setTweetPost] = useState({
+    content: ''
+  });
+
+  const handleChange =(event)=> {
+    
+    setTweetPost(prevTweet => {
+      return {
+        ...prevTweet,
+         content: event.target.value
+      }
+    })
+    // console.log(value);
+  }
+ const handleSubmit = (event) => {
+  
+  props.addTweet(tweetPost);
+  setTweetPost({
+      content: ""
+  });
+  event.preventDefault();
+  
+
+
+ }
+
   return (
     <div className='Tweet__container'>
-       <Avatar src={image}/>
+      <form>
+       <Avatar src={kola}/>
        <div className='Tweet__content'>
+           
             <div className="input__section">
-               <input className='input__hometweet' type="text" placeholder='Whats happening?'/>
+               <input 
+               onChange={handleChange}
+               value ={tweetPost.content}
+               className='input__hometweet' 
+               type="text" 
+               placeholder='Whats happening?'/>
             </div>
 
             <div className='icon__tweet'>
@@ -22,13 +58,15 @@ export default function Tweet({image}) {
                  <InsertEmoticonIcon className='icon_tweethome'/>
                 </div>
 
-                <Button variant="contained" className='tweet__home'>Tweet</Button>
+                <Button onClick={handleSubmit} variant="contained" className='tweet__home'>Tweet</Button>
 
             </div>
            
     
 
        </div>
+       
+       </form>
     </div>
   )
 }
