@@ -51,22 +51,27 @@ span{
     
 }
 
+
 .options{
+   
+    
     width: 100px;
     right: 0;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
     height: auto;
+    display: none;
     text-align: center;
     background-color: black;
     z-index: 1000;
     color: white;
     padding: 10px;
     position: absolute;
-    border: 1px solid lightblue;
+    border: 1px solid lightblue;;
 
 }
+.options__open{
+    display: block;
+}
+
 /* .block__options{
     display: block;
 } */

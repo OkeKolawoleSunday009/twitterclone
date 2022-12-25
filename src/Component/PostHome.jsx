@@ -1,6 +1,6 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './styles/Post.css';
-import { Avatar } from '@mui/material'
+import { Avatar} from '@mui/material'
 import VerifiedUserIcon from '@mui/icons-material/VerifiedUser';
 import MoreHoriz from '@mui/icons-material/MoreHoriz';
 import ChatBubbleOutlineIcon from '@mui/icons-material/ChatBubbleOutline';
@@ -11,18 +11,14 @@ import kola from '../img/kola.jpg';
 
 export default function PostHome(props,{image_post, comments, tweets, likes, uploads}) {
   
+const [optionsOpen, setOptionsOpen] = useState(false);
 
-  // const options=()=> {
-  //   var options = document.getElementById("options");
-  //   options.classList.toggle("options");
-  // }
-
-  function options() {
-    const navs = document.getElementById('#options')
+  const options=()=> {
+    setOptionsOpen((p) => !p);
     
-    navs.classList.toggle('options');
   }
-  
+
+
  
   return (
     <div className='Post__container'>
@@ -38,7 +34,7 @@ export default function PostHome(props,{image_post, comments, tweets, likes, upl
 
             <div className='options__container'>
                 <MoreHoriz onClick={options}/>
-                <div id='options' className=''>
+                <div className={`${optionsOpen ? 'options ': 'options options__open' } `}>
                   
                     <h5>delete</h5>
                     <h5>edit</h5>
