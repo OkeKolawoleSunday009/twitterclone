@@ -43,7 +43,7 @@ export default function Tweet(props) {
        <div className='Tweet__content'>
            
             <div className="input__section">
-               <input 
+               <textarea
                onChange={handleChange}
                value ={tweetPost.content}
                className='input__hometweet' 

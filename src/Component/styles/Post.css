@@ -8,6 +8,11 @@
 
 
 }
+.contentpost__body{
+    word-wrap: break-word;
+   word-break: break-all;
+   width: 80%;
+}
 .Post__container:hover{
     background-color: var(--twitter_secondary);
 
