@@ -28,6 +28,16 @@ const RandomPost =[
         content:"Hosting with the best prices",
         comments:"20",
         tweets:"252", likes:"100", uploads:"1"
+    },
+    {
+        id: 4,
+        image:"",
+        image_post:"",
+        title:"GoDaddy Nigeria",
+        username:"@GoDaddyNigeria",
+        content:"Hosting with the best prices",
+        comments:"20",
+        tweets:"252", likes:"100", uploads:"1"
     }
 ]
 export default RandomPost;

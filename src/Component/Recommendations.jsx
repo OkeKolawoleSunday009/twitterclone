@@ -6,12 +6,32 @@ import kola from '../img/kola.jpg';
 import Post from './Post';
 import PostHome from './PostHome';
 import RandomPost from './RandomPost';
+import twitterbird from '../img/twitterbird.png';
+import HomeIcon from '@mui/icons-material/Home';
+import SearchIcon from '@mui/icons-material/Search';
+import NotificationsNoneIcon from '@mui/icons-material/NotificationsNone';
+import MailOutlineIcon from '@mui/icons-material/MailOutline';
+import BookmarksIcon from '@mui/icons-material/Bookmarks';
+import PermIdentityIcon from '@mui/icons-material/PermIdentity';
+import SideRow from './SideRow';
+
+
 
 
 export default function Recommendations() {
   const [tweets, setTweets]= useState([]);
-  const [posts, setPosts] = useState([...RandomPost])
- 
+  const [posts, setPosts] = useState([...RandomPost]);
+
+  const Nav = ()=>{
+    return <div className='Nav_mobile'>
+     <SideRow selected Icon={HomeIcon} />
+     <SideRow Icon={SearchIcon}/>
+     <SideRow  Icon={BookmarksIcon} />
+     <SideRow  Icon={NotificationsNoneIcon}/>
+     <SideRow  Icon={MailOutlineIcon} />
+     
+    </div>
+  }
 
   function addTweet(tweet){
    setTweets(prevTweets =>{
@@ -39,13 +59,14 @@ export default function Recommendations() {
     <div className='Recommendations'>
       <div className='Home__button'>
         <h3>Home</h3>
+        <img className=" twitter__logo"src={twitterbird} alt="twitter logo"/>
         <StarOutlineIcon className='icon'/>
       </div>
       <hr />
 
             
       <Tweet image={kola} addTweet={addTweet}/>
-      <hr style={{border: "7px solid  #9c9c9c !important;"}}/>
+      <hr style={{border: "7px solid  #9c9c9c !important"}}/>
  
        {tweets.map((tweetNote, index) => {
           return <PostHome
@@ -56,15 +77,18 @@ export default function Recommendations() {
        })}
 
     
-       {posts.map((post) => {
-          <Post 
-            id ={post.id}
-            value={post}
+       {posts.map((post, index) => {
+         return <Post 
+             key ={index}
+             title={post.title}
             
-            // onDeletePost = {deletePost}
+            
+            onDeletePost = {deletePost}
            />
           //  
        } )}
+
+       <Nav/>
       
       
        

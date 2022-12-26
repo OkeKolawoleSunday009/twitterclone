@@ -4,7 +4,6 @@
     padding-bottom: 10px;
     border-right: 1px solid #f1efef;
     border-left: 1px solid  #f1efef;
-    
     overflow-y:hidden;
     scroll-behavior: smooth;
 
@@ -14,6 +13,7 @@
     padding-left: 10px;
     padding-right: 10px;
     justify-content: space-between;
+    align-items: center;
    
 }
 .Home__button > .icon {
@@ -23,6 +23,11 @@
     margin-top: 15px;
     width: 100%;
 }
+.twitter__logo{
+    width: 20%;
+    display: none;
+  }
+  
 @media screen and (max-width: 768px) {
     .Recommendations{
         
@@ -30,11 +35,35 @@
         transition:  flex 0.2s;
 
     }
+    .twitter__logo{
+        width: 10%;
+        display: block;
+      }
+      .Nav_mobile{
+        width: 100%;
+        display: flex;
+        position: fixed;
+        bottom:0;
+        z-index: 100000;
+        background-color: white;
+        border-top: 1px solid  #f1efef;
+      }
  }
+
+ 
+
  @media screen and (max-width: 1200px) {
     .Recommendations{
         
         flex: 1;
         transition:  flex 0.2s;
     }
+   
+ }
+
+ @media screen and (min-width: 768px) {
+    .Nav_mobile{
+        display: none;
+       }
+   
  }
