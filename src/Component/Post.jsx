@@ -24,6 +24,8 @@ export default function Post(props) {
 
   ]);
   useEffect(() => {
+
+    
     setPost( prevPost => {
       return {
        ...prevPost
