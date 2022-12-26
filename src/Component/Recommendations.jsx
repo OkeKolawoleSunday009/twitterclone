@@ -5,10 +5,13 @@ import Tweet from './Tweet';
 import kola from '../img/kola.jpg';
 import Post from './Post';
 import PostHome from './PostHome';
+import RandomPost from './RandomPost';
 
 
 export default function Recommendations() {
   const [tweets, setTweets]= useState([]);
+  const [posts, setPosts] = useState([...RandomPost])
+ 
 
   function addTweet(tweet){
    setTweets(prevTweets =>{
@@ -23,6 +26,13 @@ export default function Recommendations() {
         return  (index !== id);
       });
     });
+  }
+  function deletePost(id){
+    setPosts(prevPosts => {
+      return prevPosts.filter((post, index) =>{
+        return  (index !==id);
+      })
+    })
   }
 
   return (
@@ -46,12 +56,17 @@ export default function Recommendations() {
        })}
 
     
-
-      <Post title="NetFlix Nigeria"
-      username="@NetflixNigeria"
-      content="The doors of the academy are open, class are now in session #farfromhome is now on NetFlix "
-      comments="20"
-      tweets="252" likes="100" uploads="1"/>
+       {posts.map((post) => {
+          <Post 
+            id ={post.id}
+            value={post}
+            
+            // onDeletePost = {deletePost}
+           />
+          //  
+       } )}
+      
+      
        
       
       

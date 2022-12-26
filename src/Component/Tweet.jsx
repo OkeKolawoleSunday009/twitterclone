@@ -44,7 +44,7 @@ export default function Tweet(props) {
            
             <div className="input__section">
                <textarea
-               onChange={handleChange}
+               onChange={handleChange} required
                value ={tweetPost.content}
                className='input__hometweet' 
                type="text" 
