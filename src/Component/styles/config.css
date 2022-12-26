@@ -10,7 +10,8 @@
     --twiter_secondary:RGB(228 232 235);
     --twiter_font_color: #9c9c9c;
     --twitter_primary:rgb(76, 76, 233);
-    
+    /* #9c9c9c; */
+    /* #f1efef; */
 }
 @media screen and (max-width: 768px) {
     h3{

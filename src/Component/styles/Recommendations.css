@@ -2,8 +2,8 @@
     flex: 0.5;
     padding-top: 10px;
     padding-bottom: 10px;
-    border-right: 1px solid  #9c9c9c;
-    border-left: 1px solid  #9c9c9c;
+    border-right: 1px solid #f1efef;
+    border-left: 1px solid  #f1efef;
     
     overflow-y:hidden;
     scroll-behavior: smooth;

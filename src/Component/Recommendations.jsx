@@ -16,6 +16,15 @@ export default function Recommendations() {
    });
 
   }
+
+  function deleteTweet(id){
+    setTweets(prevTweets =>{
+      return prevTweets.filter((tweetNote, index) => {
+        return  (index !== id);
+      });
+    });
+  }
+
   return (
     <div className='Recommendations'>
       <div className='Home__button'>
@@ -31,8 +40,9 @@ export default function Recommendations() {
        {tweets.map((tweetNote, index) => {
           return <PostHome
            key={index}
-          id ={index}
-           content ={tweetNote.content} />
+           id ={index}
+           content ={tweetNote.content}
+           onDelete= {deleteTweet} />
        })}
 
     

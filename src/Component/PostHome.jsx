@@ -11,11 +11,14 @@ import kola from '../img/kola.jpg';
 
 export default function PostHome(props,{image_post, comments, tweets, likes, uploads}) {
   
-const [optionsOpen, setOptionsOpen] = useState(false);
+const [optionsOpen, setOptionsOpen] = useState(true);
 
   const options=()=> {
     setOptionsOpen((p) => !p);
     
+  }
+  function handleDelete() {
+    props.onDelete(props.id);
   }
 
 
@@ -36,7 +39,7 @@ const [optionsOpen, setOptionsOpen] = useState(false);
                 <MoreHoriz onClick={options}/>
                 <div className={`${optionsOpen ? 'options ': 'options options__open' } `}>
                   
-                    <h5>delete</h5>
+                    <h5 onClick={handleDelete}>delete</h5>
                     <h5>edit</h5>
 
 
