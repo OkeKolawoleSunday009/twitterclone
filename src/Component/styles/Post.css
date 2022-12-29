@@ -10,8 +10,8 @@
 }
 .contentpost__body{
     word-wrap: break-word;
-   word-break: break-all;
    width: 80%;
+   text-align: justify;
 }
 .Post__container:hover{
     background-color: var(--twitter_secondary);
@@ -29,6 +29,7 @@
     display: flex;
     align-items: center;
 }
+
 .contentpost__body{
     color: black;
 }
@@ -47,6 +48,7 @@ span{
     align-items: center;
     gap: 10px;
 }
+
 .options__container{
     
 }
@@ -56,9 +58,9 @@ span{
    
     
     width: 100px;
-    right: 0;
+    right: -10000px;
     height: auto;
-    display: none;
+    /* display: none; */
     text-align: center;
     background-color: black;
     z-index: 1000;
@@ -69,7 +71,8 @@ span{
 
 }
 .options__open{
-    display: block;
+    /* display: block; */
+    right: 0;
 }
 
 /* .block__options{
@@ -81,4 +84,8 @@ span{
        width: 90%;
 
     }
+    .Post__container .Post__heading  .Post_tvu  h3, p{
+       font-size: 13px;
+    }
+  
  }

@@ -14,6 +14,7 @@ import { Button } from '@mui/material';
 import Profile from './Profile';
 import MoreHorizIcon from '@mui/icons-material/MoreHoriz';
 import kola from '../img/kola.jpg'
+import { Link } from 'react-router-dom';
 
 
 export default function SideBar() {
@@ -23,7 +24,10 @@ export default function SideBar() {
   return (
     <div className='sideBar'>
       <img className=" twitter__logo"src={twitterbird} alt="twitter logo"/>
-     <SideRow selected Icon={HomeIcon} title="Home" className="side__row"/>
+      <Link to ={`/`}  style={{textDecoration:"none", color: "black"}}>
+         <SideRow selected Icon={HomeIcon} title="Home" className="side__row"/>
+
+      </Link>
      <SideRow  Icon={TagIcon} title="Explore"/>
      <SideRow  Icon={PeopleIcon} title="Communities"/>
      <SideRow  Icon={NotificationsNoneIcon} title="Notifications"/>

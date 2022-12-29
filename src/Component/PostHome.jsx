@@ -8,6 +8,7 @@ import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 import MarkChatUnreadIcon from '@mui/icons-material/MarkChatUnread';
 import FileUploadIcon from '@mui/icons-material/FileUpload';
 import kola from '../img/kola.jpg';
+import { Link } from 'react-router-dom';
 
 export default function PostHome(props,{image_post, comments, tweets, likes, uploads}) {
   
@@ -19,6 +20,13 @@ const [optionsOpen, setOptionsOpen] = useState(true);
   }
   function handleDelete() {
     props.onDelete(props.id);
+  }
+
+  function handleEdit() {
+    props.onEdit(props.id);
+    
+
+
   }
 
 
@@ -40,7 +48,10 @@ const [optionsOpen, setOptionsOpen] = useState(true);
                 <div className={`${optionsOpen ? 'options ': 'options options__open' } `}>
                   
                     <h5 onClick={handleDelete}>delete</h5>
-                    <h5>edit</h5>
+                    {/* <Link  to ={`/PostView`}> */}
+                     <h5 onClick={handleEdit}>edit</h5>
+                  {/* </Link> */}
+               
 
 
                   </div>

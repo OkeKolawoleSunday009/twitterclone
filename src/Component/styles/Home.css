@@ -1,10 +1,11 @@
 .Home{
     display: flex;
-    flex: 1;
+    /* flex: 1; */
     width: 100%;
-    max-width: 1300px;
+    max-width: 1500px;
     margin-left: auto;
     margin-right: auto;
+    /* height: 200vh; */
 }
 
 

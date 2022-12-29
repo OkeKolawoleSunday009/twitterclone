@@ -11,7 +11,7 @@
   .sideContainer{
     display: flex;
     align-items: center;
-    padding: 10px 20px;
+    padding: 10px 10px;
 
   
 
@@ -35,8 +35,6 @@
   color: black !important;
   height: 60px;
   border-radius: 30px;
-  width: fit-content;
-  
   cursor: pointer;
   
 }
@@ -99,6 +97,13 @@
         transition: display 10s;
         
     }
+    
+.sideContainer:hover{
+   height: auto;
+   border-radius: 40px;
+   width: fit-content;
+  
+}
  }
  @media screen and (max-width: 1200px) {
   .sideBar{
