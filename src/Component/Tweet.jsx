@@ -8,7 +8,7 @@ import InsertEmoticonIcon from '@mui/icons-material/InsertEmoticon';
 import kola from '../img/kola.jpg';
 
   
-export default function Tweet(props) {
+export default function Tweet({addTweet,}) {
 
   const [tweetPost, setTweetPost] = useState({
     content: ''
@@ -26,7 +26,7 @@ export default function Tweet(props) {
   }
  const handleSubmit = (event) => {
   
-  props.addTweet(tweetPost);
+  addTweet(tweetPost);
   setTweetPost({
       content: ""
   });

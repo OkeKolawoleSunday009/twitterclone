@@ -21,13 +21,15 @@ import TurnedInNotIcon from '@mui/icons-material/TurnedInNot';
 import MessageOutlinedIcon from '@mui/icons-material/MessageOutlined';
 import PersonAddAltOutlinedIcon from '@mui/icons-material/PersonAddAltOutlined';
 import styles from './styles/styles.module.css'
-import { useNavigate } from 'react-router-dom';
+// import { useNavigate } from 'react-router-dom';
+// import PostView from './PostView';
+// import PostView from './PostView';
 
 
-export default function Recommendations(props) {
+export default function Recommendations({onDelete, onEdit}) {
   const [tweets, setTweets]= useState([]);
 
-  let history = useNavigate();
+  // let history = useNavigate();
   const [optionsOpen, setOptionsOpen] = useState(true);
 
   const options =()=> {
@@ -90,44 +92,31 @@ export default function Recommendations(props) {
    
 
   //     });
-     
-            
+ 
     // };
-
-    function deletePost(id){
-      
-    
-         var index = RandomPost.map(function(e){
-          return (e.id, console.log(e.id))
-         }).indexOf(id);
-        RandomPost.splice(index,1);
-
-        history(`/`);
-
-        
+    function editTweet(id, content){
+      // localStorage.setTweets('content', content)
+      var index = tweets.map(function(e){
+        return (e.id)
+       }).indexOf(id);
+      //  var PostContent =  tweets[index];
+      //  PostContent.content = content;
+  
+       console.log(index, 'clicked')
 
     }
 
+  
+    
     
 
+  
 
-  // function deletePost(id){
-  //   setPosts(prevPosts =>{
-  //     return prevPosts.filter((post, index) => {
-  //       return  (index !== id);
-  //     });
-  //   });
-  // };
-
-
-
-  function editPost(id){
-
-  }
 
 
   return (
     <div className='Recommendations'>
+    
       <div className='Home__button'>
         <h3 className='button_home'>Home</h3>
 
@@ -154,7 +143,8 @@ export default function Recommendations(props) {
            id ={index}
            content ={tweetNote.content}
            onDelete= {deleteTweet} 
-          //  onEdit= {editTweet}
+           onEdit= {editTweet}
+
           //  onShow={showTweet}
           />
        })}
@@ -171,8 +161,9 @@ export default function Recommendations(props) {
              likes={post.likes}
              uploads={post.uploads}
              username={post.username}
-             onEdit= {editPost}
-             onDelete = {deletePost}
+             onEdit= {onEdit}
+             onDelete = {onDelete}
+             
            />
           //  
        } )} 
@@ -183,8 +174,8 @@ export default function Recommendations(props) {
 
        <Nav/>
       
-       
-      
+     {/* <PostView
+     onEdit={editPost}/> */}
       
       </div>
   )

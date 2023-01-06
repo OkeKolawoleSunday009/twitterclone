@@ -1,15 +1,41 @@
-import { Avatar } from '@mui/material';
-import React from 'react';
+import { Avatar, Button } from '@mui/material';
+import {React, useEffect} from 'react';
+// import RandomPost from './RandomPost';
 import './styles/PostView.css';
+// import { useNavigate } from 'react-router-dom';
 
 
-export default function PostView(props) {
 
-    // function showTweet (){
-    //     // props.onEdit(tweet)
-    //     props.onShow(props.id)
-    //     console.log(props.content)
-    // }
+
+export default function PostView({ id,editPost, content }) {
+
+  // let history = useNavigate();
+
+  // console.log(props.displayContent)
+
+
+  // history(`/`);'
+ 
+  // editPost(content);
+  // console.log(content);
+
+
+
+ 
+
+
+  // const subEdit =(e)=>{
+  //   // e.preventDefault();
+  //   // var a =  RandomPost[index];
+  //   // a.content = content;
+  //   // console.log(content)
+  // }
+
+
+
+
+  
+
   
   return (
     <div className='PostView'>
@@ -18,13 +44,19 @@ export default function PostView(props) {
        <div className="post__tweet">
          <div className="profile__tweet">
             <Avatar/>
+           
             <div className="div"> 
-            {/* {showTweet} */} 
-              {/* <textarea
-              
-               value={showTweet}
+            <textarea
+            //  value ={editPost}
+            //  onChange = {show}
 
-              /> */}
+
+             />
+            {/* {displayContent} */}
+
+             <Button >Edit</Button>
+
+           
             </div>
 
 

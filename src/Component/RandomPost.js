@@ -38,6 +38,14 @@ const RandomPost =[
         content:"Gold Plate",
         comments:"20",
         tweets:"252", likes:"65", uploads:"1"
-    }
+    },{
+    id: 5,
+    image:"",
+    image_post:"",
+    title:"Adunola",
+    username:"@GAdunola",
+    content:"Sugar pie",
+    comments:"20",
+    tweets:"252", likes:"65", uploads:"1"}
 ]
 export default RandomPost;

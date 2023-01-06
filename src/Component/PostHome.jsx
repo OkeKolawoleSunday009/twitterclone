@@ -10,7 +10,7 @@ import FileUploadIcon from '@mui/icons-material/FileUpload';
 import kola from '../img/kola.jpg';
 import { Link } from 'react-router-dom';
 
-export default function PostHome(props,{image_post, comments, tweets, likes, uploads}) {
+export default function PostHome({onDelete,onEdit,id, content, image_post, comments, tweets, likes, uploads}) {
   
 const [optionsOpen, setOptionsOpen] = useState(true);
 
@@ -19,11 +19,11 @@ const [optionsOpen, setOptionsOpen] = useState(true);
     
   }
   function handleDelete() {
-    props.onDelete(props.id);
+   onDelete(id);
   }
 
   function handleEdit() {
-    props.onEdit(props.id);
+    onEdit(id,content);
     
 
 
@@ -48,9 +48,9 @@ const [optionsOpen, setOptionsOpen] = useState(true);
                 <div className={`${optionsOpen ? 'options ': 'options options__open' } `}>
                   
                     <h5 onClick={handleDelete}>delete</h5>
-                    {/* <Link  to ={`/PostView`}> */}
+                    <Link  to ={`/PostView`}>
                      <h5 onClick={handleEdit}>edit</h5>
-                  {/* </Link> */}
+                    </Link>
                
 
 
@@ -63,7 +63,7 @@ const [optionsOpen, setOptionsOpen] = useState(true);
 
          </div>
          <div className="Post__body">
-            <p className='contentpost__body'>{props.content}</p>
+            <p className='contentpost__body'>{content}</p>
          </div>
 
          <div>

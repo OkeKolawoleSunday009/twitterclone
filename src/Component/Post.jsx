@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import {  React, useState} from 'react';
 import './styles/Post.css';
 import { Avatar } from '@mui/material'
 import VerifiedUserIcon from '@mui/icons-material/VerifiedUser';
@@ -8,34 +8,48 @@ import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 import MarkChatUnreadIcon from '@mui/icons-material/MarkChatUnread';
 import FileUploadIcon from '@mui/icons-material/FileUpload';
 import { Link } from 'react-router-dom';
+import PostView from './PostView';
 
-export default function Post(props) {
+export default function Post({ onDelete, onEdit, id, content, title, image, username, image_post, comments, tweets, likes, uploads}) {
     
-
   const [optionsOpen, setOptionsOpen] = useState(true);
-
+  // const [displayContent, setDisplayContent] = useState('');
   const options=()=> {
     setOptionsOpen((p) => !p);
     
   }
   function deletePost(){
-    props.onDelete(props.id);
-    console.log('clicked');
+    onDelete(id, content);
+    // console.log('clicked');
   }
-  function editTweet(){
-   
+
+
+  function editPost(){
+   onEdit(id,content);
+  //  console.log(content)
+  
+  //  setDisplayContent(displayContent);
+  //  localStorage.setItem('DisplayContent', content);
+ 
   }
+
+ 
+ 
+
+    
+
+      // console.log(contentViewp)
 
   
   return (
     <div className='Post__container'>
-    <Avatar src={props.image}/>
+    <Avatar src={image}/>
     <div className='Post__content'>
          <div className='Post__heading'>
             <div className='Post_tvu'>
-                <div><h3>{props.title}</h3></div>
+                <div><h3>{title}</h3></div>
                 <VerifiedUserIcon/>
-                <div><p>{props.username}</p></div>
+                <div><p>{username}</p></div>
 
             </div>
 
@@ -45,7 +59,7 @@ export default function Post(props) {
                   
                   <h5 onClick={deletePost}>delete</h5>
                   <Link  to ={`/PostView`}>
-                     <h5 onClick={editTweet}>edit</h5>
+                     <h5 onClick={editPost}>edit</h5>
                   </Link>
                
 
@@ -57,29 +71,29 @@ export default function Post(props) {
 
          </div>
          <div className="Post__body">
-            <p className='contentpost__body'>{props.content}</p>
+            <p className='contentpost__body'>{content}</p>
          </div>
 
          <div>
-            {props.image_post}
+            {image_post}
          </div>
          <div className="Post__icon">
             <div className="comment button_post">
               <ChatBubbleOutlineIcon/>
-              <p>{props.comments}</p>
+              <p>{comments}</p>
             </div>
             <div className="tweets button_post">
                 <MarkChatUnreadIcon/>
-              <p>{props.tweets}</p>
+              <p>{tweets}</p>
             </div>
             <div className="likes button_post">
               <FavoriteBorderIcon/>
-              <p>{props.likes}</p>
+              <p>{likes}</p>
             </div>
 
             <div className="uploads button_post">
             <FileUploadIcon/>
-              <p>{props.uploads}</p>
+              <p>{uploads}</p>
             </div>
 
            
@@ -89,8 +103,11 @@ export default function Post(props) {
 
 
          </div>
-        
- 
+
+         <div className="divno">
+            <PostView editPost={editPost}/>
+       
+          </div>
 
     </div>
  </div>

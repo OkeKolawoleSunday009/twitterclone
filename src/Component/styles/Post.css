@@ -8,6 +8,9 @@
 
 
 }
+.divno{
+    display: none;
+}
 .contentpost__body{
     word-wrap: break-word;
    width: 80%;
