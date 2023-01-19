@@ -1,32 +1,34 @@
 import React, { useState } from 'react'
-import './styles/Recommendations.css';
+import '../Component/styles/Recommendations.css';
 import StarOutlineIcon from '@mui/icons-material/StarOutline';
-import Tweet from './Tweet';
+import Tweet from '../Component/Tweet';
 import kola from '../img/kola.jpg';
-import Post from './Post';
-import PostHome from './PostHome';
-import RandomPost from './RandomPost';
+import Post from '../Component/Post';
+import PostHome from '../Component/PostHome';
+import RandomPost from '../Component/RandomPost';
 import twitterbird from '../img/twitterbird.png';
 import HomeIcon from '@mui/icons-material/Home';
 import SearchIcon from '@mui/icons-material/Search';
 import NotificationsNoneIcon from '@mui/icons-material/NotificationsNone';
 import MailOutlineIcon from '@mui/icons-material/MailOutline';
-import SideRow from './SideRow';
+import SideRow from '../Component/SideRow';
 import { Avatar } from '@mui/material';
 import PermIdentityIcon from '@mui/icons-material/PermIdentity';
-import Profile from './Profile';
+import Profile from '../Component/Profile';
 import MoreHorizIcon from '@mui/icons-material/MoreHoriz';
 import ListAltIcon from '@mui/icons-material/ListAlt';
 import TurnedInNotIcon from '@mui/icons-material/TurnedInNot';
 import MessageOutlinedIcon from '@mui/icons-material/MessageOutlined';
 import PersonAddAltOutlinedIcon from '@mui/icons-material/PersonAddAltOutlined';
-import styles from './styles/styles.module.css'
+import styles from '../Component/styles/styles.module.css'
+import { useNavigate } from 'react-router-dom';
 // import { useNavigate } from 'react-router-dom';
 // import PostView from './PostView';
 // import PostView from './PostView';
 
 
-export default function Recommendations({onDelete, onEdit}) {
+export default function Recommendations({onEdit, onDelete}) {
+  const navigate = useNavigate()
   const [tweets, setTweets]= useState([]);
 
   // let history = useNavigate();
@@ -105,9 +107,51 @@ export default function Recommendations({onDelete, onEdit}) {
        console.log(index, 'clicked')
 
     }
+    function onSDelete(id, content){
+      onDelete(content, id)
+      navigate('/')
+    }
+    //post from random post
+   
+    const Gost = (
+      RandomPost.length
+      ?(  
+        RandomPost.map((post, index ) => {
+         return <Post 
+               key ={index}
+               id={post.id}
+               title={post.title}
+               content={post.content}
+               comments={post.comments}
+               tweets={post.tweets}
+               likes={post.likes}
+               uploads={post.uploads}
+               username={post.username}
+               onEdit= {onEdit}
+               onDelete = {onSDelete}
+               
+             /> }
+          )
 
-  
-    
+      ): "No Random  Post yet"
+    )
+
+    const GostPrivate = (
+      tweets.length
+      ?( tweets.map((tweetNote, index) => {
+        return <PostHome
+         key={index}
+         id ={index}
+         content ={tweetNote.content}
+         onDelete= {deleteTweet} 
+         onEdit= {editTweet}
+
+        //  onShow={showTweet}
+        />
+     })
+
+      ): ""
+    )
     
 
   
@@ -136,37 +180,18 @@ export default function Recommendations({onDelete, onEdit}) {
             
       <Tweet image={kola} addTweet={addTweet}/>
       <hr style={{border: "7px solid  #9c9c9c !important"}}/>
- 
-       {tweets.map((tweetNote, index) => {
-          return <PostHome
-           key={index}
-           id ={index}
-           content ={tweetNote.content}
-           onDelete= {deleteTweet} 
-           onEdit= {editTweet}
+      
 
-          //  onShow={showTweet}
-          />
-       })}
+      <div style={{textAlign:"center", fontSize:"20px"}}>
+       {GostPrivate}
+       </div>
+       
+      <div style={{textAlign:"center", fontSize:"20px"}}>
+            {Gost}
 
-    
-       {RandomPost.map((post, index ) => {
-         return <Post 
-             key ={index}
-             id={post.id}
-             title={post.title}
-             content={post.content}
-             comments={post.comments}
-             tweets={post.tweets}
-             likes={post.likes}
-             uploads={post.uploads}
-             username={post.username}
-             onEdit= {onEdit}
-             onDelete = {onDelete}
-             
-           />
-          //  
-       } )} 
+       </div>
+
+      
 
        {/* <Post key={1} title={t}  /> */}
 

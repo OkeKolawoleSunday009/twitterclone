@@ -1,6 +1,6 @@
 import { Avatar, Button } from '@mui/material'
 import React from 'react';
-import './styles/Whotofollow.css'
+import '../Component/styles/Whotofollow.css'
 
 
 export default function WhoToFollow({image, title, username, promoted, verified}) {

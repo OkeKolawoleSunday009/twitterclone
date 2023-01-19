@@ -1,7 +1,7 @@
 import React from 'react';
-import SideRow from './SideRow';
-import './styles/SideBar.css'
-import './styles/config.css'
+import SideRow from '../Component/SideRow';
+import '../Component/styles/SideBar.css'
+import '../Component/styles/config.css'
 import HomeIcon from '@mui/icons-material/Home';
 import TagIcon from '@mui/icons-material/Tag';
 import PeopleIcon from '@mui/icons-material/People';
@@ -11,7 +11,7 @@ import BookmarksIcon from '@mui/icons-material/Bookmarks';
 import PermIdentityIcon from '@mui/icons-material/PermIdentity';
 import twitterbird from '../img/twitterbird.png'
 import { Button } from '@mui/material';
-import Profile from './Profile';
+import Profile from '../Component/Profile';
 import MoreHorizIcon from '@mui/icons-material/MoreHoriz';
 import kola from '../img/kola.jpg'
 import { Link } from 'react-router-dom';

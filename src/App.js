@@ -1,13 +1,12 @@
 import './App.css';
 import React, { Component } from 'react';
 import  { BrowserRouter as Router,Routes, Route } from 'react-router-dom';
-import SideBar from './Component/SideBar';
-import Search from './Component/Search';
 import PostView from './Component/PostView';
-import Recommendations from './Component/Recommendations';
 import RandomPost from './Component/RandomPost';
+import Recommendations from './Pages/Recommendations';
+import Search from './Pages/Search'
+import SideBar from './Pages/SideBar'
 // import { useNavigate } from 'react-router-dom';
-
 
 
 export class App extends Component {
@@ -39,7 +38,7 @@ editPost(id, content){
    PostContent.content = content;
    displayContent = content;
 
-  //  console.log(index, 'clicked',displayContent)
+   console.log(index, 'clicked',displayContent)
   return displayContent;
   // localStorage.setTweets('content', content)
 

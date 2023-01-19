@@ -1,8 +1,8 @@
 import React from 'react'
-import './styles/Search.css';
-import './styles/config.css';
+import '../Component/styles/Search.css';
+import '../Component/styles/config.css';
 import SearchIcon from '@mui/icons-material/Search';
-import Trend from './Trend';
+import Trend from '../Component/Trend';
 import WhoToFollow from './WhoToFollow';
 
 export default function Search() {
