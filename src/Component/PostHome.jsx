@@ -48,9 +48,9 @@ const [optionsOpen, setOptionsOpen] = useState(true);
                 <div className={`${optionsOpen ? 'options ': 'options options__open' } `}>
                   
                     <h5 onClick={handleDelete}>delete</h5>
-                    <Link  to ={`/PostView`}>
+              
                      <h5 onClick={handleEdit}>edit</h5>
-                    </Link>
+                 
                
 
 

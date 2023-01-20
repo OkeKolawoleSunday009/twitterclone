@@ -30,6 +30,7 @@ import { useNavigate } from 'react-router-dom';
 export default function Recommendations({onEdit, onDelete}) {
   const navigate = useNavigate()
   const [tweets, setTweets]= useState([]);
+  const [postContent, setPostContent] = useState('');
 
   // let history = useNavigate();
   const [optionsOpen, setOptionsOpen] = useState(true);
@@ -37,6 +38,13 @@ export default function Recommendations({onEdit, onDelete}) {
   const options =()=> {
     setOptionsOpen((p) => !p);
     console.log('clicked');
+    
+  }
+
+  const handleEdit = (post) =>{
+    console.log(post.content, "clicked");
+    setPostContent(post.content);
+   
     
   }
 
@@ -119,15 +127,8 @@ export default function Recommendations({onEdit, onDelete}) {
         RandomPost.map((post, index ) => {
          return <Post 
                key ={index}
-               id={post.id}
-               title={post.title}
-               content={post.content}
-               comments={post.comments}
-               tweets={post.tweets}
-               likes={post.likes}
-               uploads={post.uploads}
-               username={post.username}
-               onEdit= {onEdit}
+               post={post}
+               onEdit= {() => handleEdit(post)}
                onDelete = {onSDelete}
                
              /> }
@@ -144,7 +145,7 @@ export default function Recommendations({onEdit, onDelete}) {
          id ={index}
          content ={tweetNote.content}
          onDelete= {deleteTweet} 
-         onEdit= {editTweet}
+         onEdit= {() => handleEdit(tweetNote)}
 
         //  onShow={showTweet}
         />
@@ -160,6 +161,8 @@ export default function Recommendations({onEdit, onDelete}) {
 
   return (
     <div className='Recommendations'>
+
+      {/* {postContent && postContent} */}
     
       <div className='Home__button'>
         <h3 className='button_home'>Home</h3>

@@ -1,5 +1,5 @@
 import { Avatar, Button } from '@mui/material';
-import {React, useEffect} from 'react';
+import {React,useState, useEffect} from 'react';
 // import RandomPost from './RandomPost';
 import './styles/PostView.css';
 // import { useNavigate } from 'react-router-dom';
@@ -7,7 +7,9 @@ import './styles/PostView.css';
 
 
 
-export default function PostView({ id,editPost, content }) {
+export default function PostView(props,{ id,contentName, content }) {
+  const [name, setName] = useState('')
+
 
   // let history = useNavigate();
 
@@ -30,10 +32,11 @@ export default function PostView({ id,editPost, content }) {
   //   // a.content = content;
   //   // console.log(content)
   // }
-
-
-
-
+useEffect(() => {
+  setName (localStorage.getItem('content'))
+ 
+}, [])
+  
   
 
   
@@ -52,9 +55,9 @@ export default function PostView({ id,editPost, content }) {
 
 
              />
-            {/* {displayContent} */}
+            {name}
 
-             <Button >Edit</Button>
+             <Button  >Edit</Button>
 
            
             </div>

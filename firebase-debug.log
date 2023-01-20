@@ -1,0 +1,103 @@
+[debug] [2023-01-19T14:11:36.112Z] ----------------------------------------------------------------------
+[debug] [2023-01-19T14:11:36.118Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\PC\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy
+[debug] [2023-01-19T14:11:36.119Z] CLI Version:   11.20.0
+[debug] [2023-01-19T14:11:36.119Z] Platform:      win32
+[debug] [2023-01-19T14:11:36.120Z] Node Version:  v18.12.1
+[debug] [2023-01-19T14:11:36.121Z] Time:          Thu Jan 19 2023 14:11:36 GMT+0000 (Coordinated Universal Time)
+[debug] [2023-01-19T14:11:36.122Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2023-01-19T14:11:36.130Z] >>> [apiv2][query] GET https://firebase-public.firebaseio.com/cli.json [none]
+[debug] [2023-01-19T14:11:36.502Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-01-19T14:11:36.504Z] > authorizing via signed-in user (okekolawoles36@gmail.com)
+[debug] [2023-01-19T14:11:36.505Z] [iam] checking project twitterclone-11084 for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2023-01-19T14:11:36.507Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/twitterclone-11084:testIamPermissions [none]
+[debug] [2023-01-19T14:11:36.507Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/twitterclone-11084:testIamPermissions x-goog-quota-user=projects/twitterclone-11084
+[debug] [2023-01-19T14:11:36.508Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/twitterclone-11084:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2023-01-19T14:11:39.373Z] <<< [apiv2][status] GET https://firebase-public.firebaseio.com/cli.json 200
+[debug] [2023-01-19T14:11:39.374Z] <<< [apiv2][body] GET https://firebase-public.firebaseio.com/cli.json {"cloudBuildErrorAfter":1594252800000,"cloudBuildWarnAfter":1590019200000,"defaultNode10After":1594252800000,"minVersion":"3.0.5","node8DeploysDisabledAfter":1613390400000,"node8RuntimeDisabledAfter":1615809600000,"node8WarnAfter":1600128000000}
+[debug] [2023-01-19T14:11:44.343Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/twitterclone-11084:testIamPermissions 200
+[debug] [2023-01-19T14:11:44.345Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/twitterclone-11084:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2023-01-19T14:11:44.351Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/twitterclone-11084 [none]
+[debug] [2023-01-19T14:11:54.938Z] Failed to make request to https://firebase.googleapis.com/v1beta1/projects/twitterclone-11084
+[debug] [2023-01-19T14:11:59.979Z] Error: Timed out.
+    at Timeout._onTimeout (C:\Users\PC\AppData\Roaming\npm\node_modules\firebase-tools\lib\utils.js:253:49)
+    at listOnTimeout (node:internal/timers:564:17)
+    at process.processTimers (node:internal/timers:507:7)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2023-01-19T14:16:47.760Z] ----------------------------------------------------------------------
+[debug] [2023-01-19T14:16:47.768Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\PC\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy
+[debug] [2023-01-19T14:16:47.770Z] CLI Version:   11.20.0
+[debug] [2023-01-19T14:16:47.771Z] Platform:      win32
+[debug] [2023-01-19T14:16:47.772Z] Node Version:  v18.12.1
+[debug] [2023-01-19T14:16:47.774Z] Time:          Thu Jan 19 2023 14:16:47 GMT+0000 (Coordinated Universal Time)
+[debug] [2023-01-19T14:16:47.775Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2023-01-19T14:16:48.033Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-01-19T14:16:48.035Z] > authorizing via signed-in user (okekolawoles36@gmail.com)
+[debug] [2023-01-19T14:16:48.036Z] [iam] checking project twitterclone-11084 for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2023-01-19T14:16:48.045Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/twitterclone-11084:testIamPermissions [none]
+[debug] [2023-01-19T14:16:48.046Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/twitterclone-11084:testIamPermissions x-goog-quota-user=projects/twitterclone-11084
+[debug] [2023-01-19T14:16:48.047Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/twitterclone-11084:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2023-01-19T14:16:49.687Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/twitterclone-11084:testIamPermissions 200
+[debug] [2023-01-19T14:16:49.688Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/twitterclone-11084:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2023-01-19T14:16:49.691Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/twitterclone-11084 [none]
+[debug] [2023-01-19T14:16:50.795Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/twitterclone-11084 200
+[debug] [2023-01-19T14:16:50.797Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/twitterclone-11084 {"projectId":"twitterclone-11084","projectNumber":"896425370203","displayName":"twitterclone","name":"projects/twitterclone-11084","resources":{"hostingSite":"twitterclone-11084"},"state":"ACTIVE","etag":"1_0595a2c0-d598-46ba-a77c-9c565f22e008"}
+[info] 
+[info] === Deploying to 'twitterclone-11084'...
+[info] 
+[info] i  deploying hosting 
+[debug] [2023-01-19T14:16:50.824Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/twitterclone-11084/versions [none]
+[debug] [2023-01-19T14:16:50.825Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/twitterclone-11084/versions {"status":"CREATED","labels":{"deployment-tool":"cli-firebase"}}
+[debug] [2023-01-19T14:16:52.758Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/twitterclone-11084/versions 200
+[debug] [2023-01-19T14:16:52.758Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/twitterclone-11084/versions {"name":"projects/896425370203/sites/twitterclone-11084/versions/80cd8b15f9af3c03","status":"CREATED","config":{},"labels":{"deployment-tool":"cli-firebase"}}
+[info] i  hosting[twitterclone-11084]: beginning deploy... 
+[info] i  hosting[twitterclone-11084]: found 17 files in build 
+[debug] [2023-01-19T14:16:52.793Z] [hosting] uploading with 200 concurrency
+[debug] [2023-01-19T14:16:53.360Z] [hosting] hash cache [YnVpbGQ] stored for 17 files
+[debug] [2023-01-19T14:16:53.361Z] [hosting][hash queue][FINAL] {"max":386,"min":18,"avg":59.11764705882353,"active":0,"complete":17,"success":17,"errored":0,"retried":0,"total":17,"elapsed":423}
+[debug] [2023-01-19T14:16:53.362Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/896425370203/sites/twitterclone-11084/versions/80cd8b15f9af3c03:populateFiles [none]
+[debug] [2023-01-19T14:16:53.363Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/896425370203/sites/twitterclone-11084/versions/80cd8b15f9af3c03:populateFiles {"files":{"/404.html":"daa499dd96d8229e73235345702ba32f0793f0c8e5c0d30e40e37a5872be57aa","/favicon.ico":"eae62e993eb980ec8a25058c39d5a51feab118bd2100c4deebb2a9c158ec11f9","/logo192.png":"3ee59515172ee198f3be375979df15ac5345183e656720a381b8872b2a39dc8b","/logo512.png":"ee7e2f3fdb8209c4b6fd7bef6ba50d1b9dba30a25bb5c3126df057e1cb6f5331","/manifest.json":"5c997de1364b8be939319fa9209abd77f2caf7f8844999a9e2e9173f844e7840","/robots.txt":"b2090cf9761ef60aa06e4fab97679bd43dfa5e5df073701ead5879d7c68f1ec5","/asset-manifest.json":"83ab3252476b4373b9a98c49dd21e283dc2eabc163925c3b0a5b0c4cfef3213d","/index.html":"90da4262444ef91e7e8e2e597c76c8c6ec98973b76002029c17627d24bd775b3","/static/css/main.ae943a83.css":"b02cec2a3fe59eeb116d935d821e05c1509ba700d64e4c6ff6cbff0153857396","/static/js/787.f649083d.chunk.js":"2bfa27609e098e75ea4df047ac7cfa210af018d4c7cdd09c190635d61bd6fd37","/static/css/main.ae943a83.css.map":"03f521fefd3822feaf33bbb69b14836038163bdfc14c74dbd05a01993191d951","/static/js/main.7b6ba5fe.js.LICENSE.txt":"f5b1b9066f9fbfc8f4e4c4b90d37d3d78f62163349a8d327122e4fb0db45763b","/static/js/787.f649083d.chunk.js.map":"608bc83a644eaf1f674524929d19a59ca05e240371cd7cbe50cf839c010b373b","/static/media/kola.0f224c3fd6501368b495.jpg":"d8e9f87eee49789ea60a8213a1124b74b8e847cab8ef6e7aa6052d396c464196","/static/media/twitterbird.25333c6b71e7d347c18c.png":"156a8c21403638f0bcab54fe385991f813d83e99129679f6894f5c304681e12d","/static/js/main.7b6ba5fe.js":"17b3396e100364f01965cdae55320760a20ed193481b832bb4baf230f8fea26c","/static/js/main.7b6ba5fe.js.map":"ec6e521d4c5613ed7a2e09723785463e568420d508285454a10fb43389f491be"}}
+[debug] [2023-01-19T14:16:54.668Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/896425370203/sites/twitterclone-11084/versions/80cd8b15f9af3c03:populateFiles 200
+[debug] [2023-01-19T14:16:54.668Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/896425370203/sites/twitterclone-11084/versions/80cd8b15f9af3c03:populateFiles {"uploadRequiredHashes":["90da4262444ef91e7e8e2e597c76c8c6ec98973b76002029c17627d24bd775b3","83ab3252476b4373b9a98c49dd21e283dc2eabc163925c3b0a5b0c4cfef3213d","b02cec2a3fe59eeb116d935d821e05c1509ba700d64e4c6ff6cbff0153857396","ec6e521d4c5613ed7a2e09723785463e568420d508285454a10fb43389f491be","03f521fefd3822feaf33bbb69b14836038163bdfc14c74dbd05a01993191d951","17b3396e100364f01965cdae55320760a20ed193481b832bb4baf230f8fea26c"],"uploadUrl":"https://upload-firebasehosting.googleapis.com/upload/sites/twitterclone-11084/versions/80cd8b15f9af3c03/files"}
+[debug] [2023-01-19T14:16:54.674Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/twitterclone-11084/versions/80cd8b15f9af3c03/files/90da4262444ef91e7e8e2e597c76c8c6ec98973b76002029c17627d24bd775b3 [none]
+[debug] [2023-01-19T14:16:54.674Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/twitterclone-11084/versions/80cd8b15f9af3c03/files/90da4262444ef91e7e8e2e597c76c8c6ec98973b76002029c17627d24bd775b3 [stream]
+[debug] [2023-01-19T14:16:54.678Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/twitterclone-11084/versions/80cd8b15f9af3c03/files/83ab3252476b4373b9a98c49dd21e283dc2eabc163925c3b0a5b0c4cfef3213d [none]
+[debug] [2023-01-19T14:16:54.679Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/twitterclone-11084/versions/80cd8b15f9af3c03/files/83ab3252476b4373b9a98c49dd21e283dc2eabc163925c3b0a5b0c4cfef3213d [stream]
+[debug] [2023-01-19T14:16:54.682Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/twitterclone-11084/versions/80cd8b15f9af3c03/files/b02cec2a3fe59eeb116d935d821e05c1509ba700d64e4c6ff6cbff0153857396 [none]
+[debug] [2023-01-19T14:16:54.682Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/twitterclone-11084/versions/80cd8b15f9af3c03/files/b02cec2a3fe59eeb116d935d821e05c1509ba700d64e4c6ff6cbff0153857396 [stream]
+[debug] [2023-01-19T14:16:54.685Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/twitterclone-11084/versions/80cd8b15f9af3c03/files/ec6e521d4c5613ed7a2e09723785463e568420d508285454a10fb43389f491be [none]
+[debug] [2023-01-19T14:16:54.686Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/twitterclone-11084/versions/80cd8b15f9af3c03/files/ec6e521d4c5613ed7a2e09723785463e568420d508285454a10fb43389f491be [stream]
+[debug] [2023-01-19T14:16:54.689Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/twitterclone-11084/versions/80cd8b15f9af3c03/files/03f521fefd3822feaf33bbb69b14836038163bdfc14c74dbd05a01993191d951 [none]
+[debug] [2023-01-19T14:16:54.690Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/twitterclone-11084/versions/80cd8b15f9af3c03/files/03f521fefd3822feaf33bbb69b14836038163bdfc14c74dbd05a01993191d951 [stream]
+[debug] [2023-01-19T14:16:54.694Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/twitterclone-11084/versions/80cd8b15f9af3c03/files/17b3396e100364f01965cdae55320760a20ed193481b832bb4baf230f8fea26c [none]
+[debug] [2023-01-19T14:16:54.694Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/twitterclone-11084/versions/80cd8b15f9af3c03/files/17b3396e100364f01965cdae55320760a20ed193481b832bb4baf230f8fea26c [stream]
+[debug] [2023-01-19T14:16:54.698Z] [hosting][populate queue][FINAL] {"max":1325,"min":1325,"avg":1325,"active":0,"complete":1,"success":1,"errored":0,"retried":0,"total":1,"elapsed":1350}
+[debug] [2023-01-19T14:16:54.699Z] [hosting] uploads queued: 6
+[debug] [2023-01-19T14:16:56.872Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/twitterclone-11084/versions/80cd8b15f9af3c03/files/83ab3252476b4373b9a98c49dd21e283dc2eabc163925c3b0a5b0c4cfef3213d 200
+[debug] [2023-01-19T14:16:56.872Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/twitterclone-11084/versions/80cd8b15f9af3c03/files/83ab3252476b4373b9a98c49dd21e283dc2eabc163925c3b0a5b0c4cfef3213d [stream]
+[debug] [2023-01-19T14:16:58.006Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/twitterclone-11084/versions/80cd8b15f9af3c03/files/90da4262444ef91e7e8e2e597c76c8c6ec98973b76002029c17627d24bd775b3 200
+[debug] [2023-01-19T14:16:58.007Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/twitterclone-11084/versions/80cd8b15f9af3c03/files/90da4262444ef91e7e8e2e597c76c8c6ec98973b76002029c17627d24bd775b3 [stream]
+[debug] [2023-01-19T14:16:58.089Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/twitterclone-11084/versions/80cd8b15f9af3c03/files/b02cec2a3fe59eeb116d935d821e05c1509ba700d64e4c6ff6cbff0153857396 200
+[debug] [2023-01-19T14:16:58.090Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/twitterclone-11084/versions/80cd8b15f9af3c03/files/b02cec2a3fe59eeb116d935d821e05c1509ba700d64e4c6ff6cbff0153857396 [stream]
+[debug] [2023-01-19T14:16:58.162Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/twitterclone-11084/versions/80cd8b15f9af3c03/files/03f521fefd3822feaf33bbb69b14836038163bdfc14c74dbd05a01993191d951 200
+[debug] [2023-01-19T14:16:58.162Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/twitterclone-11084/versions/80cd8b15f9af3c03/files/03f521fefd3822feaf33bbb69b14836038163bdfc14c74dbd05a01993191d951 [stream]
+[debug] [2023-01-19T14:17:25.095Z] [uploadQueue] Retrying task ec6e521d4c5613ed7a2e09723785463e568420d508285454a10fb43389f491be
+[debug] [2023-01-19T14:17:25.099Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/twitterclone-11084/versions/80cd8b15f9af3c03/files/ec6e521d4c5613ed7a2e09723785463e568420d508285454a10fb43389f491be [none]
+[debug] [2023-01-19T14:17:25.099Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/twitterclone-11084/versions/80cd8b15f9af3c03/files/ec6e521d4c5613ed7a2e09723785463e568420d508285454a10fb43389f491be [stream]
+[debug] [2023-01-19T14:17:25.110Z] [uploadQueue] Retrying task 17b3396e100364f01965cdae55320760a20ed193481b832bb4baf230f8fea26c
+[debug] [2023-01-19T14:17:25.111Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/twitterclone-11084/versions/80cd8b15f9af3c03/files/17b3396e100364f01965cdae55320760a20ed193481b832bb4baf230f8fea26c [none]
+[debug] [2023-01-19T14:17:25.112Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/twitterclone-11084/versions/80cd8b15f9af3c03/files/17b3396e100364f01965cdae55320760a20ed193481b832bb4baf230f8fea26c [stream]
+[debug] [2023-01-19T14:17:55.915Z] [uploadQueue] Retrying task ec6e521d4c5613ed7a2e09723785463e568420d508285454a10fb43389f491be
+[debug] [2023-01-19T14:17:55.918Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/twitterclone-11084/versions/80cd8b15f9af3c03/files/ec6e521d4c5613ed7a2e09723785463e568420d508285454a10fb43389f491be [none]
+[debug] [2023-01-19T14:17:55.918Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/twitterclone-11084/versions/80cd8b15f9af3c03/files/ec6e521d4c5613ed7a2e09723785463e568420d508285454a10fb43389f491be [stream]
+[debug] [2023-01-19T14:17:55.931Z] [uploadQueue] Retrying task 17b3396e100364f01965cdae55320760a20ed193481b832bb4baf230f8fea26c
+[debug] [2023-01-19T14:17:55.933Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/twitterclone-11084/versions/80cd8b15f9af3c03/files/17b3396e100364f01965cdae55320760a20ed193481b832bb4baf230f8fea26c [none]
+[debug] [2023-01-19T14:17:55.934Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/twitterclone-11084/versions/80cd8b15f9af3c03/files/17b3396e100364f01965cdae55320760a20ed193481b832bb4baf230f8fea26c [stream]
+[debug] [2023-01-19T14:18:27.527Z] [uploadQueue] Retrying task ec6e521d4c5613ed7a2e09723785463e568420d508285454a10fb43389f491be
+[debug] [2023-01-19T14:18:27.530Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/twitterclone-11084/versions/80cd8b15f9af3c03/files/ec6e521d4c5613ed7a2e09723785463e568420d508285454a10fb43389f491be [none]
+[debug] [2023-01-19T14:18:27.530Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/twitterclone-11084/versions/80cd8b15f9af3c03/files/ec6e521d4c5613ed7a2e09723785463e568420d508285454a10fb43389f491be [stream]
+[debug] [2023-01-19T14:18:27.540Z] [uploadQueue] Retrying task 17b3396e100364f01965cdae55320760a20ed193481b832bb4baf230f8fea26c
+[debug] [2023-01-19T14:18:27.542Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/twitterclone-11084/versions/80cd8b15f9af3c03/files/17b3396e100364f01965cdae55320760a20ed193481b832bb4baf230f8fea26c [none]
+[debug] [2023-01-19T14:18:27.542Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/twitterclone-11084/versions/80cd8b15f9af3c03/files/17b3396e100364f01965cdae55320760a20ed193481b832bb4baf230f8fea26c [stream]

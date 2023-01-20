@@ -1,0 +1,25 @@
+{
+const [ContentName, setContentName] = useState("")
+
+  handleRefresh = () => {
+   // by calling this method react re-renders the component
+   this.setState({});
+ };
+//  history = useNavigate();
+
+
+
+
+  render() {
+    
+  }
+}
+
+import './App.css';
+import React, { Component } from 'react';
+import  { BrowserRouter as Router,Routes, Route } from 'react-router-dom';
+import PostView from './Component/PostView';
+import RandomPost from './Component/RandomPost';
+import Recommendations from './Pages/Recommendations';
+import Search from './Pages/Search'
+import SideBar from './Pages/SideBar'
